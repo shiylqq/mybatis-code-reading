@@ -13,10 +13,10 @@
 <typeAliases>
     <package name="org.shi.code.reading.mybatis.test1.pojo" /><!--直接扫描包下面的类，如果有@Alias则用配置的别名，否则使用小写类名-->
 </typeAliases>
-    <plugins>
-        <plugin interceptor="org.shi.code.reading.mybatis.test1.SlowSqlInterceptor">
-            <property name="limitSecond" value="0"/>
-        </plugin>
-    </plugins>
+<!--    <plugins>-->
+<!--        <plugin interceptor="org.shi.code.reading.mybatis.test1.SlowSqlInterceptor">-->
+<!--            <property name="limitSecond" value="0"/>-->
+<!--        </plugin>-->
+<!--    </plugins>-->
 
 </configuration>

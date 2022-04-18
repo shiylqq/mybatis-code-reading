@@ -8,8 +8,8 @@ import org.apache.ibatis.session.RowBounds;
 import org.shi.code.reading.mybatis.test1.pojo.Book;
 
 import java.util.List;
-
-@CacheNamespace
+//开启或关闭二级缓存
+//@CacheNamespace
 public interface BookMapper {
         @Options
         @Select("SELECT * FROM book WHERE id = #{id}")

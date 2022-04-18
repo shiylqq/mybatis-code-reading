@@ -25,18 +25,14 @@ public class MyTest1 {
             System.out.println(book2);
         }//在sqlSession调用Close方法时会根据当前事务情况选择二级缓存生效或丢弃
 
+        //关闭session后一级缓存还会存在吗？localCacheScope=session
+        //在session关闭后会被清除
+        try (SqlSession session = sqlSessionFactory.openSession()) {
+            BookMapper mapper = session.getMapper(BookMapper.class);
+            Book book = mapper.selectBook(1);
+            System.out.println(book);
+        }
 
-
-
-//        DataSource dataSource = BlogDataSourceFactory.getBlogDataSource();
-//        TransactionFactory transactionFactory =
-//                new JdbcTransactionFactory();
-//        Environment environment =
-//                new Environment("development", transactionFactory, dataSource);
-//        Configuration configuration = new Configuration(environment);
-//        configuration.addMapper(BlogMapper.class);
-//        SqlSessionFactory sqlSessionFactory =
-//                new SqlSessionFactoryBuilder().build(configuration);
     }
 
     public static SqlSessionFactory getSqlSessionFactory() throws IOException {
