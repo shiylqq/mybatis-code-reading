@@ -12,9 +12,10 @@ public class Service {
     @Resource
     private BookMapper bookMapper;
 
-    public void getBook(Integer id){
+    public Book getBook(Integer id){
         Book book = bookMapper.selectBook(id);
-        System.out.println(book);
+        //System.out.println(book);
+        return book;
     }
 
     @Transactional
