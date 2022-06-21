@@ -1,11 +1,10 @@
-package org.shi.code.reading.mybatis.test1.mapper;
+package org.shi.code.reading.mybatis.pure.mapper;
 
-import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.session.RowBounds;
-import org.shi.code.reading.mybatis.test1.pojo.Book;
+import org.shi.code.reading.mybatis.pure.pojo.Book;
 
 import java.util.List;
 //开启或关闭二级缓存

@@ -1,4 +1,4 @@
-package org.shi.code.reading.mybatis.test1;
+package org.shi.code.reading.mybatis.pure;
 
 import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.mapping.BoundSql;

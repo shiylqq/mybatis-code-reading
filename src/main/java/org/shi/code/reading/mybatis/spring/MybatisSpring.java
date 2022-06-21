@@ -1,6 +1,6 @@
 package org.shi.code.reading.mybatis.spring;
 
-import org.shi.code.reading.mybatis.test1.pojo.Book;
+import org.shi.code.reading.mybatis.pure.pojo.Book;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MybatisSpring {

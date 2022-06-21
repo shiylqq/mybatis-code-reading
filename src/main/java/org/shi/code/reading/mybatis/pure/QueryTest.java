@@ -1,16 +1,16 @@
-package org.shi.code.reading.mybatis.test1;
+package org.shi.code.reading.mybatis.pure;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.shi.code.reading.mybatis.test1.mapper.BookMapper;
-import org.shi.code.reading.mybatis.test1.pojo.Book;
+import org.shi.code.reading.mybatis.pure.mapper.BookMapper;
+import org.shi.code.reading.mybatis.pure.pojo.Book;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-public class MyTest1 {
+public class QueryTest {
     public static void main(String[] args) throws IOException {
 
         SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();

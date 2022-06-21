@@ -1,4 +1,4 @@
-package org.shi.code.reading.mybatis.test1.pojo;
+package org.shi.code.reading.mybatis.pure.pojo;
 
 import java.io.Serializable;
 
