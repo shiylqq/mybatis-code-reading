@@ -4,6 +4,8 @@ import org.shi.code.reading.mybatis.pure.mapper.BookMapper;
 import org.shi.code.reading.mybatis.pure.pojo.Book;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronizationAdapter;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import javax.annotation.Resource;
 
@@ -21,5 +23,16 @@ public class Service {
     @Transactional
     public void addBook(Book book){
         bookMapper.add(book);
+        TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronizationAdapter() {
+            @Override
+            public void afterCommit() {
+                super.afterCommit();
+            }
+
+            @Override
+            public void afterCompletion(int status) {
+                super.afterCompletion(status);
+            }
+        });
     }
 }
